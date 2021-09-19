@@ -27,7 +27,7 @@ pipeline {
             steps {
                echo "INFO : Running new Docker Image"
                sh "docker rm -f pipeline-demo:latest || true "
-               sh "docker run --restart always --name pipeline-demo pipeline-demo:latest"
+               sh "docker run --restart always  pipeline-demo:latest"
                echo "INFO : Deployed "
             }
         }
