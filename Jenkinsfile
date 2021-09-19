@@ -1,9 +1,14 @@
 pipeline {
     agent any
+    tools {
+            maven 'Maven 3.5.2'
+            jdk 'jdk8'
+        }
     stages {
         stage('Test') {
                 steps {
                  echo 'INFO: Testing....'
+                 sh 'mvn -Dmaven.test.failure.ignore=true install'
                 }
         }
         stage('Build') {
