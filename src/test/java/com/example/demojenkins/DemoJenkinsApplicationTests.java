@@ -28,7 +28,7 @@ class DemoJenkinsApplicationTests {
     }
     @Test
     public void testLessThan10(){
-        assertFalse(DemoJenkinsApplication.checkGreaterThan10(9));
+        assertFalse(DemoJenkinsApplication.checkGreaterThan10(12));
     }
 //    @Test
 //    public void testEqual10(){
