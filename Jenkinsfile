@@ -3,9 +3,7 @@ pipeline {
     stages {
         stage('Test') {
         agent {
-           node {
-            label 'master'
-           }
+           label 'master'
         }
                 steps {
                  echo 'INFO: Testing....'
