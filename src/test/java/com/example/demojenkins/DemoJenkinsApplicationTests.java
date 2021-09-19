@@ -26,10 +26,10 @@ class DemoJenkinsApplicationTests {
     public void testGreaterThan10(){
         assertTrue(DemoJenkinsApplication.checkGreaterThan10(11));
     }
-    @Test
-    public void testLessThan10(){
-        assertFalse(DemoJenkinsApplication.checkGreaterThan10(9));
-    }
+//    @Test
+//    public void testLessThan10(){
+//        assertFalse(DemoJenkinsApplication.checkGreaterThan10(9));
+//    }
 //    @Test
 //    public void testEqual10(){
 //        assertFalse(DemoJenkinsApplication.checkGreaterThan10(10));
