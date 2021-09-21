@@ -32,6 +32,6 @@ class DemoJenkinsApplicationTests {
     }
     @Test
     public void testEqual10(){
-        assertFalse(DemoJenkinsApplication.checkGreaterThan10(11));
+        assertFalse(DemoJenkinsApplication.checkGreaterThan10(1sdfsdafsdf));
     }
 }
