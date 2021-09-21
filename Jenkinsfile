@@ -10,13 +10,14 @@ pipeline {
         }
                 steps {
                  echo 'INFO: Testing....'
-                 sh 'mvn -Dmaven.test.failure.ignore=true install'
+                 sh 'mvn test'
                 }
         }
         stage('Build') {
         agent any
             steps {
                 echo "INFO: Building Docker Image"
+                sh 'mvn install'
                 sh "docker build -t pipeline-demo:latest ."
                 echo "INFO: Docker Image build"
             }
