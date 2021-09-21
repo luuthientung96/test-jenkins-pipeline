@@ -17,6 +17,7 @@ public class DemoJenkinsApplication {
     public static boolean checkGreaterThan10(int number){
         System.out.println("This is first commit");
         System.out.println("This is first commit 2");
+        System.out.println("This is Jenkin 3");
         return number >10;
     }
 
