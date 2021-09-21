@@ -11,18 +11,13 @@ pipeline {
                 steps {
                  echo 'INFO: Testing....'
                  sh 'mvn test'
+                 sh 'mvn install'
                 }
         }
         stage('Build') {
-        agent {
-                   docker {
-                     image 'maven:3-alpine'
-                     args '-v /root/.m2:/root/.m2'
-                   }
-        }
+        agent any
             steps {
                 echo "INFO: Building Docker Image"
-                sh 'mvn install'
                 sh "docker build -t pipeline-demo:latest ."
                 echo "INFO: Docker Image build"
             }
